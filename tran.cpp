@@ -17,7 +17,7 @@ int main()
 	std::cout << "sum = " << su << " pr = " << pr << std::endl;
     
     shift = 1;
-    while (shift < n)
+    while (shift <= n)
         shift *= 2;
     
     a = n;
