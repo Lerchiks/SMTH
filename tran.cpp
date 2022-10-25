@@ -4,9 +4,9 @@ int main()
 {
 	unsigned int n = 0;
 	std::cin >> n;
-	unsigned int  a = n, bin_a;
+	unsigned int  a = n;
 	int su = 0, pr = 1;
-    unsigned int shift;	
+    unsigned int shift = 1;	
 
 	while (a)
 	{
@@ -16,21 +16,33 @@ int main()
 	}
 	std::cout << "sum = " << su << " pr = " << pr << std::endl;
     
-    shift = 1;
-    while (shift <= n)
-        shift *= 2;
     
+    
+    while (shift <= n && shift != 0)
+        shift <<= 1;
+    
+    if (shift ==0)
+    {
+    std::cout << 1;
+    a = n - (1 << 31);
+    shift = 1 << 31;
+    }
+    else
+    {
     a = n;
+    }
     
-    shift /= 2;
+    shift >>= 1;
+    
     
     while (shift)
     {
         std::cout << a / shift;
         a %= shift;
-        shift /= 2;
-        
+        shift >>= 1; //shift /= 2;
     }
+    
+    
 
 //00111010101 
 	return 0;
