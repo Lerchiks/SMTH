@@ -6,7 +6,7 @@ int main()
     long long int n;
     int a, j=0;
     std::cin >> n >> a;
-    unsigned int shift = 1;
+    unsigned long long  int shift = 1;
     
     while (shift <= n && shift != 0)
     shift *= a;
@@ -28,8 +28,7 @@ int main()
                 case 12: {std::cout << "C"; break;}
                 case 13: {std::cout << "D"; break;}
                 case 14: {std::cout << "E"; break;}
-                case 15: {std::cout << "F"; break;}
-                case 16: {std::cout << "G"; break;}    
+                case 15: {std::cout << "F"; break;}          
                 }
         else   
         std::cout << j;
