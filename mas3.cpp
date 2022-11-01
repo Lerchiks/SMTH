@@ -27,17 +27,20 @@ int main()
 	std::cout << "x_0: ";
 	std::cin >> x_0;
 
-	printP(Polinom, deg, "p(x_0): ");
-
-	
-
 	std::cout << std::endl;
 
 	int res = Polinom[0];
 	for (int i = 0; i < deg + 1; ++i)
 		res = res * x_0 + Polinom[i];
 
-	std::cout << "p_0(x_0): " << res << std::endl;
+std::cout << "p_0(x_0): " << res << std::endl;
+
+	/*for (int step = 0; step < deg; ++step)
+		for (int i = 1; i < deg + 1 - step )
+	*/
+
+	
+    printP(Polinom, deg, "p(x_0): ", x_0);
 	delete[] Polinom;
     return 0;
 }
